@@ -1,12 +1,13 @@
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
     compileSdk = Ver.compileSdk
 
     defaultConfig {
-        applicationId = "com.zyc.nestscroll"
+        applicationId = "com.zyc.lib.nestscroll"
         minSdk = Ver.minSdk
         targetSdk = Ver.targetSdk
         versionCode = 1
@@ -31,5 +32,8 @@ android {
 }
 
 dependencies {
+    implementation(dependencyNotation = project(mapOf("path" to ":nest-scroll")))
+
     implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.appcompat:appcompat:1.4.1")
 }
