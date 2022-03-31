@@ -4,9 +4,6 @@ plugins {
     id("maven-publish")
 }
 
-group = "nest-scroll"
-version = "1.0.2"
-
 android {
     compileSdk = Ver.compileSdk
 
@@ -35,5 +32,16 @@ dependencies {
     with(Dep.Compose) {
         implementation(ui)
         implementation(material)
+    }
+}
+
+publishing {
+    publications {
+        create("maven_public", MavenPublication::class) {
+            groupId = "com.zyc.nestscroll"
+            artifactId = "nestscroll"
+            version = "1.0.3"
+            from(components.getByName("java"))
+        }
     }
 }
