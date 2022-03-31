@@ -1,10 +1,11 @@
-import Dep.Compose.material
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
+
+group = "nest-scroll"
+version = "1.0.2"
 
 android {
     compileSdk = Ver.compileSdk
