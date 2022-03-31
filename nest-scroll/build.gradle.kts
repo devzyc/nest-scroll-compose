@@ -50,7 +50,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.zyc.nestscroll"
             artifactId = "nestscroll"
-            version = "1.0.4"
+            version = "1.0.3"
 
             afterEvaluate {
                 from(components["release"])
